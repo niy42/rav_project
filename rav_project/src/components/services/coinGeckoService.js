@@ -1,7 +1,7 @@
 // src/services/coinGeckoService.js
 import axios from 'axios';
 
-const { COINGECKO_API } = import.meta.env.COINGECKO_API;
+const COINGECKO_API = import.meta.env.COINGECKO_API;
 
 const API_URL = 'https://api.coingecko.com/api/v3';
 

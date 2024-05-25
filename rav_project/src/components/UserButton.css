@@ -1,0 +1,16 @@
+.user-button {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    outline: none;
+}
+
+.user-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust as needed: cover, contain, fill, etc. */
+    border-radius: 50%;
+}

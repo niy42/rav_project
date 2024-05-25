@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+
+:root {
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg: #040C18;
+  --color-footer : #0f1a55;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
+  background-color: #20252B;
+
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .main-content__section-content--chart-mobile {
+    @apply h-64 w-full bg-gray-800 rounded-lg flex items-center justify-center
+  }
+
+  .main-content__section-content--orderbook-mobile {
+   @apply h-64 bg-gray-800 rounded-lg flex items-center justify-center
+  }
+
+  .main-content__section-content--trading-pairs-mobile {
+    @apply h-64 bg-gray-800 rounded-lg flex items-center justify-center
+  }
+
+  .main-content__mini-content--orderbook {
+    @apply h-64 bg-[#20252B] rounded-lg flex items-center justify-center
+  }
+
+  .main-content__mini-content--trading-pairs {
+    @apply h-64 bg-[#20252B] rounded-lg flex items-center justify-center
+  }
+
+  .main-content {
+    @apply flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-4
+  }
+
+  .main-content__navbar {
+    @apply flex justify-center items-center w-full mb-4
+  }
+
+  .main-content__navbar-container {
+    @apply bg-[#402c47] w-full flex justify-between items-center p-2 rounded-md
+  }
+
+  .main-content__navbar-button {
+    @apply flex-1 py-1 px-2 mx-1 rounded-md text-gray-300
+  }
+
+  .main-content__section--candlestick {
+    @apply bg-[#17181B] p-6 rounded-lg flex-1
+  }
+
+  .main-content__content-title {
+    @apply text-xl mb-4 text-gray-200
+  }
+  
+  .main-content__content {
+    @apply bg-[#17181B] p-6 rounded-lg 
+  }
+
+  .main-content__section-title {
+    @apply text-xl mb-4 text-gray-200
+  }
+
+  .main-content__section-content--orderbook-trading-pair {
+    @apply h-full bg-[#17181B] p-6 rounded-lg flex flex-col flex-[0.5]
+  }
+
+  .main-content__mini-navbar {
+    @apply flex justify-center items-center mb-4
+  }
+
+  .main-content__mini-navbar-container {
+    @apply bg-[#402c47] w-full flex justify-around items-center p-2 rounded-md
+  }
+
+  .main-content__section-content--chart1 {
+   @apply w-full bg-[#20252B] rounded-lg flex items-center justify-center 
+  }
+}

@@ -27,6 +27,7 @@ npm install
 # Start the project
 npm start
 
+```
 Contributing
 Guidelines for contributing to the project.
 

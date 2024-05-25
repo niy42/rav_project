@@ -1,6 +1,7 @@
 // src/services/coinGeckoService.js
-
 import axios from 'axios';
+
+const { COINGECKO_API } = import.meta.env.COINGECKO_API;
 
 const API_URL = 'https://api.coingecko.com/api/v3';
 
@@ -29,7 +30,7 @@ export const getCandlestickData = async (id) => {
         method: 'GET',
         url: `${API_URL}/coins/${id}/ohlc`,
         params: { vs_currency: 'usd', days: '30' },
-        headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-7Fw5iZLn6hWSFNAo7zRwBxKj' }
+        headers: { accept: 'application/json', 'x-cg-demo-api-key': COINGECKO_API }
     };
 
     const response = await axios.request(options);

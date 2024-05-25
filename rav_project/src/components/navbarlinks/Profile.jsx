@@ -7,9 +7,9 @@ const Profile = () => {
         navigate('/protectedpage')
     }
     return (
-        <div>
-            <p className='block text-center font-bold text-3xl'>Profile Page</p>
-            <button onClick={handleNavClick} className='p-2 rounded-full bg-blue-600'>back to ProtectedPage</button>
+        <div className='space-y-6'>
+            <p className='mt-2 block text-center font-bold text-3xl text-gray-300'>Profile Page</p>
+            <button onClick={handleNavClick} className='p-2 ml-2 rounded-full bg-[#453c5a] text-gray-300 font-semibold'>Home</button>
         </div>
     )
 }

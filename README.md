@@ -28,17 +28,19 @@ npm install
 npm start
 
 ```
-Contributing
+## Contributing
 Guidelines for contributing to the project.
 
-Fork the repository.
-Create a new branch: git checkout -b feature/YourFeature.
-Make your changes and commit them: git commit -m 'Add some feature'.
-Push to the branch: git push origin feature/YourFeature.
-Submit a pull request.
-License
+- Fork the repository.
+- Create a new branch: git checkout -b feature/YourFeature.
+- Make your changes and commit them: git commit -m 'Add some feature'.
+- Push to the branch: git push origin feature/YourFeature.
+- Submit a pull request.
+
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
-Your Name - obanlaniyi42@gmail.com
+## Contact
+
+email: obanlaniyi42@gmail.com
 Project Link: https://github.com/niy42/rav-project

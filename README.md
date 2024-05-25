@@ -47,4 +47,4 @@ Have any questions or feedback? Feel free to reach out:
 - Email: obanlaniyi42@gmail.com
 - LinkedIn: [cryptogenius](https://www.linkedin.com/in/adeniyi-obanla-3a137914b/)
 - Twitter: [@yung_0x7](https://twitter.com/@yung_0x7)
-- Project Link: https://github.com/niy42/rav-project
+- Project Link: https://github.com/niy42/rav_project

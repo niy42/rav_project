@@ -58,7 +58,8 @@ const AuthScreen = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen p-4 bg-gray-600">
+        <div className="flex flex-col space-y-4 items-center justify-center min-h-screen p-4 bg-gray-600">
+            <h1 className='text-lg text-gray-300 font-semibold'>Login Email</h1>
             <div className="w-full max-w-md p-4 bg-gray-400 rounded-lg shadow-md">
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>

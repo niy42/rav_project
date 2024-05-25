@@ -4,19 +4,42 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { getCandlestickData } from '../services/coinGeckoService';
 import ReactApexChart from 'react-apexcharts';
 import { formatData } from './utility';
+import { useUser } from '../UserContext';
 
 const CandlestickChart = ({ id }) => {
     const [candlestickData, setCandlestickData] = useState([]);
+    const { setShowAlert, setLoading } = useUser();
 
     useEffect(() => {
         const fetchCandlestickData = async () => {
-            const data = await getCandlestickData(id);
-            setCandlestickData(data);
-            console.log(data);
+            try {
+                const data = await getCandlestickData(id);
+                if (data) {
+                    setCandlestickData(data);
+                    setShowAlert({
+                        status: true,
+                        type: 'success',
+                        message: 'fetching successful'
+                    });
+                } else {
+                    setShowAlert({ status: true, type: 'info', mesage: 'No data available' })
+                }
+            } catch (error) {
+                console.error(error);
+            } finally {
+                //setLoading(false);
+            }
         };
 
         fetchCandlestickData();
-    }, [id]);
+    }, [id, setShowAlert, setLoading]);
+
+    /*useEffect(() => {
+        if (!candlestickData.length) {
+            console.log('No data found');
+            setShowAlert({ status: true, type: 'info', mesage: 'No data available' })
+        }
+}, [candlestickData]);*/
 
     const options = {
         chart: {
@@ -77,7 +100,6 @@ const CandlestickChart = ({ id }) => {
 
     return (
         <div>
-
             <ReactApexChart
                 series={[{ data: seriesData }]}
                 options={options}

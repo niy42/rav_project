@@ -1,4 +1,4 @@
-import { Header, MainContent, Footer, AuthScreen } from './components';
+import { Header, MainContent, Footer, Info } from './components';
 import './App.css'
 
 export default function App() {
@@ -7,8 +7,9 @@ export default function App() {
       <Header />
       <MainContent />
       <div className=''>
-        <Footer />
+        <Info />
       </div>
+      <Footer />
 
     </div>
   );

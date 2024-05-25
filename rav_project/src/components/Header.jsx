@@ -1,5 +1,5 @@
 // Header.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { react } from '../assets/index';
@@ -19,6 +19,7 @@ const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [showSearchBar, setShowSearchBar] = useState(false);
     const { user, searchItem, setSearchItem } = useUser();
+
     const navigate = useNavigate();
 
     const handleNavClick = (url) => (e) => {
@@ -45,6 +46,7 @@ const Header = () => {
                     </a>
                 ))}
             </nav>
+
             <div className="flex relative md:hidden items-center space-x-2">
                 <AiOutlineSearch fontSize={24} className="text-white cursor-pointer" onClick={toggleSearchBar} />
                 {toggleMenu

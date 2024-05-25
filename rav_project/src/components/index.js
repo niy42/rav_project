@@ -9,3 +9,4 @@ export { default as UserButton } from './UserButton';
 export { default as CandleStickChart } from './candlestickchart/CandlestickChart';
 export { default as OrderBook } from './orderbook/OrderBook';
 export { default as TradingpairsList } from './tradingpairslist/TradingPairsList';
+export { default as Info } from './Info';

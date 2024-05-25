@@ -10,6 +10,18 @@ export const UserProvider = ({ children }) => {
     const [searchItem, setSearchItem] = useState('');
     const [timeInterval, setTimeInterval] = useState('1m');
     const [tradingPairs, setTradingPairs] = useState(['BTC/USD', 'ETH/USD', 'LTC/USD']);
+    const [showAlert, setShowAlert] = useState({ status: false, type: '', message: '' });
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        let timer = null;
+        if (showAlert?.status) {
+            timer = setTimeout(() => (
+                setShowAlert({ status: false, type: '', message: '' })
+            ), 2000);
+        }
+        return () => clearTimeout(timer);
+    }, [showAlert]);
 
     useEffect(() => {
         setUser(JSON.parse(localStorage.getItem('user')));
@@ -24,7 +36,11 @@ export const UserProvider = ({ children }) => {
             timeInterval,
             setTimeInterval,
             tradingPairs,
-            setTradingPairs
+            setTradingPairs,
+            loading,
+            setLoading,
+            showAlert,
+            setShowAlert
         }}>
             {children}
         </UserContext.Provider>

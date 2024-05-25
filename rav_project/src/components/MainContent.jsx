@@ -70,7 +70,7 @@ function MainContent() {
             case 'orderbook':
                 return (
                     <div className="main-content__section-content--orderbook-mobile">
-                        <p>Order Book</p>
+                        <OrderBook fsym={'BTC'} tsym={'USD'} />
                     </div>
                 );
             case 'tradingPairs':
@@ -89,7 +89,7 @@ function MainContent() {
             case 'orderbook':
                 return (
                     <div className="main-content__mini-content--orderbook">
-                        <OrderBook data={''} />
+                        <OrderBook fsym={'BTC'} tsym={'USD'} />
                     </div>
                 );
             case 'tradingPairs':

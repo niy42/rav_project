@@ -6,7 +6,7 @@ const AlertIcon = ({ type }) => {
     return (
         <svg
             aria-hidden="true"
-            className={`${styles.alertIcon} ${styles[type]}`}
+            className={`${styles.alertIcon} ${styles[type]} bg-gray-600 rounded-sm w-4 h-4`}
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"

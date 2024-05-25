@@ -8,7 +8,7 @@ import { useUser } from '../UserContext';
 
 const CandlestickChart = ({ id }) => {
     const [candlestickData, setCandlestickData] = useState([]);
-    const { setShowAlert, setLoading } = useUser();
+    const { setShowAlert } = useUser();
 
     useEffect(() => {
         const fetchCandlestickData = async () => {
@@ -19,20 +19,23 @@ const CandlestickChart = ({ id }) => {
                     setShowAlert({
                         status: true,
                         type: 'success',
-                        message: 'fetching successful'
+                        message: 'Fetching successful'
                     });
                 } else {
-                    setShowAlert({ status: true, type: 'info', mesage: 'No data available' })
+                    setShowAlert({
+                        status: true,
+                        type: 'info',
+                        message: 'No data available'
+                    });
                 }
             } catch (error) {
-                console.error(error);
-            } finally {
-                //setLoading(false);
+                setShowAlert({ status: true, type: 'info', message: `${error?.message} ...` });
             }
         };
 
         fetchCandlestickData();
-    }, [id, setShowAlert, setLoading]);
+    }, [id, setShowAlert]);
+
 
     /*useEffect(() => {
         if (!candlestickData.length) {

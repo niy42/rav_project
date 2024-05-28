@@ -25,7 +25,7 @@ cd your-repository
 npm install
 
 # Start the project
-npm start
+npm run dev
 
 ```
 ## Contributing
